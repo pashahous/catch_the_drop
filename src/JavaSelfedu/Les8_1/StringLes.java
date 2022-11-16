@@ -1,6 +1,5 @@
 package JavaSelfedu.Les8_1;
 
-import org.jetbrains.annotations.NotNull;
 
 public class StringLes {
 
