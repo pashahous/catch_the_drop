@@ -27,7 +27,7 @@ public class Main {
 //        ArraysMy.squearEight();
 //        Human.myFamely();
         Array10.initialArray();
-        Array10.printArray();
+//        Array10.printArray();
     }
 
     public static void testPets(){
