@@ -20,15 +20,15 @@ import java.util.Arrays;
   При каком n в какую сторону сдвиг можете выбирать сами.*/
 public class Main {
     public static void main(String[] args) {
-//        System.out.println(testCase(5));
-////        int [] arrTask1 = {1, 1, 0, 0, 1, 0, 1, 1, 0, 0};
-//        Task1(new int[]{1, 1, 1, 1, 1, 1, 1, 1,});
-//        Task2();
-//        Task3(new int[]{1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1});
-//        Task4(8);
-//        Task5(10, 1000);
-//        checkBalance(new int[]{2, 2, 2, 1, 2, 2, 10, 1});
-//        checkBalance(new int[]{1, 1, 1,2, 1});
+        System.out.println(testCase(5));
+        int [] arrTask1 = {1, 1, 0, 0, 1, 0, 1, 1, 0, 0};
+        Task1(new int[]{1, 1, 1, 1, 1, 1, 1, 1,});
+        Task2();
+        Task3(new int[]{1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1});
+        Task4(8);
+        Task5(10, 1000);
+        checkBalance(new int[]{2, 2, 2, 1, 2, 2, 10, 1});
+        checkBalance(new int[]{1, 1, 1,2, 1});
         arrOffset(new int[] {1,2,3,4,5,6,7,8,9,10,11,12,13,14},-5);
 
     }
@@ -113,10 +113,8 @@ public class Main {
 
     public static boolean checkBalance(int[] inputArr) {
         //2, 2, 2, 1, 2, 2,10, 1
-        //решил задачу без гуuления
         int sumLeft = 0;
         int sumRight = 0;
-//        int indexOfBalance = 0;
         for (int i = 0; i < inputArr.length; i++) {
             sumLeft += inputArr[i];
             for (int j = i + 1; j < inputArr.length; j++) {
@@ -139,9 +137,8 @@ public class Main {
         return false;
     }
     public static void arrOffset(int [] arr,int numOffset){
-        // решил в лоб, без гугления, ну и после в гугле не нашел решение, позже еще поищу.
         if(numOffset<0){
-                for(int k = 0;k<Math.abs(numOffset); k++) {
+                for(int k = 0;k>numOffset; k--) {
                     int temp = arr[0];
                     for (int i = 0; i < arr.length-1; i++) {
                         arr[i] = arr[i+1];
@@ -151,7 +148,7 @@ public class Main {
             }
             System.out.println(Arrays.toString(arr));
         } else {
-            for(int k = 0;k<numOffset; k++) { // потовряем несколько раз
+            for(int k = 0;k<numOffset; k++) {
                 int temp = arr[arr.length - 1];
                 for (int i = arr.length - 1; i > 0; i--) {
                     arr[i] = arr[i - 1];
