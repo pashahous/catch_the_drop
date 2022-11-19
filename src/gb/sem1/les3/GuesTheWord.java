@@ -24,6 +24,7 @@ public class GuesTheWord {
             int minLenght = checkMinLenght(answer.length(), quesWord.length());
             if (answer.equals(quesWord)) {
                 System.out.println(" Вы угадали слово");
+                sc.close();
                 break;
             }
 

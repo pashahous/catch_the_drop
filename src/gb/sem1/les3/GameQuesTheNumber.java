@@ -19,6 +19,7 @@ public class GameQuesTheNumber {
                 if (answer == guesNumber) {
                     System.out.println(" Поздравляю вы угадали число");
                     isEnd = true;
+                    sc.close();
                 } else {
                     System.out.println("Вы не угадали попробуйте еще");
                 }
