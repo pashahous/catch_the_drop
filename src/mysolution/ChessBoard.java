@@ -1,4 +1,4 @@
-package JR.Arrays;
+package mysolution;
 
 public class ChessBoard {
 
