@@ -25,6 +25,50 @@ public class Employee {
     private Long salary;
     private Integer age;
 
+    public void setFio(String fio) {
+        this.fio = fio;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setNumber(Long number) {
+        this.number = number;
+    }
+
+    public void setSalary(Long salary) {
+        this.salary = salary;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    public String getFio() {
+        return fio;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public Long getNumber() {
+        return number;
+    }
+
+    public Long getSalary() {
+        return salary;
+    }
+
     public Employee(String fio, String position, String email, Long number, Long salary, Integer age) {
         this.fio = fio;
         this.position = position;
