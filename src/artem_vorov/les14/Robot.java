@@ -6,7 +6,7 @@ package artem_vorov.les14;
  false - если нет.
 Должно выполняться условие: если robot1.fight(robot2) = true, то robot2.fight(robot1) = false
 */
-class Robot {
+public class Robot {
     public String  name;
     private int age;
     private int power;

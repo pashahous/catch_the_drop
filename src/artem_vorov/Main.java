@@ -11,19 +11,19 @@ import artem_vorov.les14.*;
 public class Main {
 
     public static void main(String[] args) {
-//        Robot r1 = new Robot("Jarvis",20,17);
-//        Robot r2 = new Robot("Petya",20,16);
-//        System.out.println(r1.fight(r2));
-//        testPets();
+        Robot r1 = new Robot("Jarvis",20,17);
+        Robot r2 = new Robot("Petya",20,16);
+        System.out.println(r1.fight(r2));
+        testPets();
 //        ArraysMy.testArrays1();
 //        ArraysMy.testArrays2();
 //        ArraysMy.testArrays3();
 //        ArraysMy.arrStr1();
 //        ArraysMy.minElement();
-
+//
 //        ArraysMy.squearEight();
-//        Human.myFamely();
-        Array10.initialArray();
+        Human.myFamely();
+//        Array10.initialArray();
 //        Array10.printArray();
     }
 
