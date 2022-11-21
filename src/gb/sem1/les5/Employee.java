@@ -13,7 +13,7 @@ persArray[4] = new Person(...);
 5. С помощью цикла вывести информацию только о сотрудниках старше 40 лет.*/
 
 public class Employee {
-    private String fio;
+    private String fullName;
 
     public Integer getAge() {
         return age;
@@ -21,12 +21,12 @@ public class Employee {
 
     private String position;
     private String email;
-    private Long number;
+    private String number;
     private Long salary;
     private Integer age;
 
-    public void setFio(String fio) {
-        this.fio = fio;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
     public void setPosition(String position) {
@@ -37,7 +37,7 @@ public class Employee {
         this.email = email;
     }
 
-    public void setNumber(Long number) {
+    public void setNumber(String number) {
         this.number = number;
     }
 
@@ -49,8 +49,8 @@ public class Employee {
         this.age = age;
     }
 
-    public String getFio() {
-        return fio;
+    public String getFullName() {
+        return fullName;
     }
 
     public String getPosition() {
@@ -61,7 +61,7 @@ public class Employee {
         return email;
     }
 
-    public Long getNumber() {
+    public String getNumber() {
         return number;
     }
 
@@ -69,8 +69,8 @@ public class Employee {
         return salary;
     }
 
-    public Employee(String fio, String position, String email, Long number, Long salary, Integer age) {
-        this.fio = fio;
+    public Employee(String fio, String position, String email, String number, Long salary, Integer age) {
+        this.fullName = fio;
         this.position = position;
         this.email = email;
         this.number = number;
@@ -78,7 +78,7 @@ public class Employee {
         this.age = age;
     }
  public void printInfo(){
-     System.out.println("ФИО: "+ this.fio);
+     System.out.println("ФИО: "+ this.fullName);
      System.out.println("Должность: "+ this.position);
      System.out.println("Электронная почта: "+this.email);
      System.out.println("Телефонный номер: "+this.number);

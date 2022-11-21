@@ -5,7 +5,7 @@ public class BasePet {
     int age;
     Woman owner; // владедец
 
-    public BasePet(String name, int age) { // если не задан воаделец то null
+    public BasePet(String name, int age) { // если не задан воладелец то null
         this.namePet = name;
         this.age = age;
         this.owner = null; // хозяин
