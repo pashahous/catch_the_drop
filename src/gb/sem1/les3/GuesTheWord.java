@@ -1,5 +1,6 @@
 package gb.sem1.les3;
 
+import java.lang.reflect.Array;
 import java.util.Scanner;
 
 public class GuesTheWord {
@@ -15,7 +16,8 @@ public class GuesTheWord {
         StringBuffer prompt = new StringBuffer(); // подсказка
 
         Scanner sc = new Scanner(System.in);
-
+        System.out.println("Компьютер загадал слово из спика ниже, а вам необходимо отгадать, что за слово");
+        System.out.println(String.join(" ",words));
         while (!isEnd) {
             System.out.println(" Компьютер загадал слово, попробуйте отгадать его, а я буду делать подсказки показывая" +
                     " букву которые стоят на своих местах");

@@ -7,6 +7,7 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) {
         Random random = new Random();
+        ArrayList<Object> arrObject;
         Animal[] animalsArray = new Animal[15];
         for (int i = 0; i < animalsArray.length; i++) {
             animalsArray[i] = ((random.nextBoolean())?
