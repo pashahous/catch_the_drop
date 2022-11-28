@@ -8,6 +8,8 @@ public class GenForClass {
             "Cherokee","Vasper"};
     private static final String [] nameOfHumans = new String[]{"Sysanna","Peter","Boris","Kostya","Fedya","Andrey","Polina","Marina","Pavel",};
     private static final String [] nameOfCompany = new String[]{"Apply","Samsung","Audi","Toyota","EPUM","Great Wall","Xiaomi","Ford","GAZPROM","ASHAN"};
+    private static final String [] nameOfTypePencil = new String[]{"Prostoy","Tverdui","Myagkii","Srednii",};
+    private static final String [] color = new String[]{"green","white","black","yellow","red","blue"};
 
     static Random random = new Random();
 //    String inputString;
@@ -16,6 +18,15 @@ public class GenForClass {
 //    public GeneratorDataForClass(String inputString){
 //        this.inputString = inputString;
 //    }
+
+    public static String getColor(){
+        Integer indx = random.nextInt(color.length);
+        return color[indx];
+    }
+    public static String getPencikType(){
+        int indx = random.nextInt(nameOfTypePencil.length);
+        return nameOfTypePencil[indx];
+    }
 
     public static String getHumanName(){//получаем случайное имя человека
         int indx = random.nextInt(nameOfHumans.length);

@@ -1,9 +1,12 @@
 package java_selfedu.les19;
 
+import java.util.ArrayList;
+
 public class Stationery {
     private long price;
     private boolean nalichie;
     private String id;
+
     Stationery() {
     }
 
@@ -13,8 +16,27 @@ public class Stationery {
         this.id = id;
     }
 
-    public void displayPen(){
-        System.out.printf("\nЦена: %d  Наличие: %s Идентификатор: %s\n",getPrice(),getNalichie(),getId());
+    //====================================
+    public static ArrayList<String> takeElementOnIndex( String[] args, int startNumberOfElement, int endNumberOfElement) {
+        ArrayList<String> returnList = new ArrayList<>();
+        for (int i = 0; i < args.length; i++) {
+            if (startNumberOfElement >= i && endNumberOfElement < i) {
+                returnList.add(args[i]);
+            }
+        }
+        return returnList;
+    }
+
+    public static ArrayList<String> takeElementOnIndex( String[] args, int startNumberOfElement) {
+        ArrayList<String> returnList = new ArrayList<>();
+        returnList.add(args[startNumberOfElement]);
+        return returnList;
+    }
+//====================================
+
+    public void display() {
+
+        System.out.printf("\nЦена: %d  Наличие: %s Идентификатор: %s\n", getPrice(), getNalichie(), getId());
     }
 
 
@@ -27,7 +49,7 @@ public class Stationery {
     }
 
     public String getNalichie() {
-        return (nalichie)?"Есть":"Нет";
+        return (nalichie) ? "Есть" : "Нет";
     }
 
     public void setNalichie(boolean nalichie) {
