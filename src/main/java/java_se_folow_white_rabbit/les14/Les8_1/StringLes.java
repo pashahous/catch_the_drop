@@ -1,4 +1,4 @@
-package java_selfedu.Les8_1;
+package java_se_folow_white_rabbit.les14.Les8_1;
 
 
 public class StringLes {

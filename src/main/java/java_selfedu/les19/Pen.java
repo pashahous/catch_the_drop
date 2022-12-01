@@ -17,9 +17,6 @@ public class Pen extends Stationery {
 
         if (this.numOfProducts > 0) this.setNalichie(true);
         else this.setNalichie(false);;
-
-
-
         this.color = color;
     }
 
@@ -28,7 +25,7 @@ public class Pen extends Stationery {
         super.display();
         String clsname = this.getClass().getName();
         String[] inStr = clsname.split("\\.");
-        String classStr = String.valueOf(Stationery.takeElementOnIndex(inStr, 2));
+        String classStr = inStr[inStr.length-1]; //берем последний элемент массива
         System.out.printf("Класс %s  \nКоличество продуктов: %d  Цвет: %s", classStr, getNumOfProducts(), getColor());
         System.out.println("\n================================================================================");
     }

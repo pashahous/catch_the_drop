@@ -1,19 +1,22 @@
 package gb.sem1.les6;
 
+import mysolution.GenForClass;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
+        GenForClass g = new GenForClass();
         Random random = new Random();
         ArrayList<Object> arrObject;
         Animal[] animalsArray = new Animal[15];
         for (int i = 0; i < animalsArray.length; i++) {
             animalsArray[i] = ((random.nextBoolean())?
-                    new Dog(GenForClass.getAnimalName()+ i,random.nextInt(20),
+                    new Dog(g.getAnimalName()+ i,random.nextInt(20),
                     true,random.nextInt(300),random.nextInt(300)):
-                    new Cat(GenForClass.getAnimalName()+i,random.nextInt(20),
+                    new Cat(g.getAnimalName()+i,random.nextInt(20),
                             random.nextBoolean(),random.nextInt(300),random.nextInt(300)));
         }
         for (Animal animal:animalsArray) {

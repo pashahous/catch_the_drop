@@ -23,6 +23,7 @@ public class Main {
 //            point3DArray[i].printXYZ();
 
 //        }
+
     }
 
 }

@@ -1,6 +1,6 @@
 package java_selfedu.les19;
 
-import gb.sem1.les6.GenForClass;
+import mysolution.GenForClass;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -21,21 +21,16 @@ public class Main {
 //        Pensil e3 = new Pensil(999,true,"jeltui",8,"white");
 //        Pensil e4 = new Pensil(102,true,"krugkui",1,"pink");
         Stationery obj = null;
+        GenForClass g = new GenForClass();
         for (int i = 0; i < 20; i++) {
-            switch (random.nextInt(4)) {
+            switch (random.nextInt(2)) {
                 case 0:
-                    obj = new Pen();
+                    obj = new Pen(random.nextInt(1000), random.nextBoolean(), g.getPencilType(),
+                            random.nextInt(20), g.getColor());
                     break;
                 case 1:
-                    obj = new Pen(random.nextInt(1000), random.nextBoolean(), GenForClass.getPencikType(),
-                            random.nextInt(20), GenForClass.getColor());
-                    break;
-                case 2:
-                    obj = new Pensil();
-                    break;
-                case 3:
-                    obj = new Pensil(random.nextInt(1000), random.nextBoolean(), GenForClass.getPencikType(),
-                            random.nextInt(20), GenForClass.getColor());
+                    obj = new Pensil(random.nextInt(1000), random.nextBoolean(), g.getPencilType(),
+                            random.nextInt(20), g.getColor());
                     break;
             }
             arrStatinery.add(obj);

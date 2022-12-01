@@ -1,9 +1,5 @@
 package gb.sem1.les7;
 
-import gb.sem1.les6.GenForClass;
-
-import java.util.Random;
-
 public class Main {
     public static void main(String[] args) {
 //        Random random = new Random();

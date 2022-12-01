@@ -45,7 +45,7 @@ public class MusicInstrument {
             this.height = height;
         }
     }
-    static class Stat{
+    static class Stat{ // внутренний класс для хранения статистики
         public static Map<Integer,Integer> typeCount = new HashMap<>();
 
     }
