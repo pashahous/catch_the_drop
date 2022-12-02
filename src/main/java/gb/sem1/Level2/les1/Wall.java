@@ -9,12 +9,9 @@ public class Wall implements Barrier {
 
     @Override
     public boolean useBarrier(WalkJump obj) {
-        System.out.println("Участник по имени " + obj.getName() + " Класса " + obj.getClassName() + "  ПЫТАЕТСЯ ПРЫГНУТЬ");
-        if (obj.canJump(heightWall)) {
-            obj.jump();
+        if (obj.jump(heightWall)) {
             return true;
         }
-        System.out.println("Участник по имени " + obj.getName() + " Класса " + obj.getClassName() + " не может так высоко прыгнуть");
         return false;
     }
 

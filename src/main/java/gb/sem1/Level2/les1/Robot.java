@@ -13,28 +13,27 @@ public class Robot implements WalkJump {
     }
 
     @Override
-    public void jump() {
-        System.out.println(nameClass + " прыгнул");
+    public boolean jump(int height) {
+        if (maxJump > height) {
+            System.out.println(getName() + " Класса " + this.getClass().getName() + "  успешно перепрыгнул препятствие " + height);
+            return true;
+        }
+        System.out.println("!!!!" +  getName() + " Класса " + this.getClass().getName() + "  не смог прыгнуть выше " + height);
+        return false;
     }
 
     @Override
-    public void run() {
-        System.out.println(nameClass + " бежит");
+    public boolean run(int lenght) {
+        if (maxLenghtOfWalk > lenght){
+            System.out.println(getName() + " Класса " + this.getClass().getName() + "  успешно пробежал " + lenght);
+            return true;
+        }
+        System.out.println("!!!!" +  getName() + " Класса " + this.getClass().getName() + "  не смог прыгнуть выше " + lenght);
+        return false;
     }
-
     @Override
     public String getName() {
         return name;
-    }
-
-    @Override
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    @Override
-    public boolean canJump(int height) {
-        return maxJump > height;
     }
 
     @Override
@@ -42,8 +41,4 @@ public class Robot implements WalkJump {
         return nameClass;
     }
 
-    @Override
-    public boolean canRun(int lenght) {
-        return maxLenghtOfWalk > lenght;
-    }
 }

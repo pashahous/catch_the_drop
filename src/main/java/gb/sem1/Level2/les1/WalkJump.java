@@ -1,14 +1,11 @@
 package gb.sem1.Level2.les1;
 
 public interface WalkJump {
-    void jump();
-    void run();
+    boolean jump(int height);
+    boolean run(int lenght);
 
     String getName();
 
     String getClassName();
-    void setName(String name);
-    boolean canRun(int lenght);
 
-    boolean canJump(int height);
 }

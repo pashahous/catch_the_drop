@@ -9,12 +9,10 @@ private int lenghtRoad;
 
     @Override
     public boolean useBarrier(WalkJump obj) {
-        System.out.println("Участник по имени " + obj.getName() + " Класса " + obj.getClassName() + "  попытается пробежать");
-        if(obj.canRun(lenghtRoad)) {
-            obj.run();
+
+        if(obj.run(lenghtRoad)) {
             return true;
         }
-            System.out.println("Участник по имени " + obj.getName() + " Класса " + obj.getClassName() + " не может так далеко бежать");
             return false;
     }
 
