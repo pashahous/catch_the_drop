@@ -4,14 +4,14 @@ import java.util.*;
 
 public class GenForClass {
     // класс для генерации случайных данных
-    private static final String[] nameOfAnimals = new String[]{"Crindle", "Brit", "Arittany", "Brodi", "Brook", "Guffy", "Brownie",
+    private static final String[] NAME_OF_ANIMALS = new String[]{"Crindle", "Brit", "Arittany", "Brodi", "Brook", "Guffy", "Brownie",
             "Cherokee", "Vasper"};
-    private static final String[] nameOfHumans = new String[]{"Sysanna", "Peter", "Boris", "Kostya", "Fedya", "Andrey", "Polina", "Marina", "Pavel","Leha","Fedya"};
-    private static final String[] nameOfCompany = new String[]{"Apply", "Samsung", "Audi", "Toyota", "EPUM", "Great Wall", "Xiaomi", "Ford", "GAZPROM", "ASHAN"};
-    private static final String[] nameOfTypePencil = new String[]{"Prostoy", "Tverdui", "Myagkii", "Srednii",};
-    private static final String[] color = new String[]{"green", "white", "black", "yellow", "red", "blue","pink"};
+    private static final String[] NAME_OF_HUMANS = new String[]{"Sysanna", "Peter", "Boris", "Kostya", "Fedya", "Andrey", "Polina", "Marina", "Pavel","Leha","Fedya"};
+    private static final String[] NAME_OF_COMPANY = new String[]{"Apply", "Samsung", "Audi", "Toyota", "EPUM", "Great Wall", "Xiaomi", "Ford", "GAZPROM", "ASHAN"};
+    private static final String[] NAME_OF_TYPE_PENCIL = new String[]{"Prostoy", "Tverdui", "Myagkii", "Srednii",};
+    private static final String[] COLOR = new String[]{"green", "white", "black", "yellow", "red", "blue","pink"};
 
-    private static final Map<String, String[]> dictOfValuesBooks = new HashMap<String, String[]>(){{
+    private static final Map<String, String[]> DICT_OF_VALUES_BOOKS = new HashMap<String, String[]>(){{
         // словарь для генерации названия книг
         //имя
         put("n", new String[]{"Алексей", "Дмитрий", "Руслан", "Павел", "Александр", "Николай", "Аркадий", "Инакентий"});
@@ -21,7 +21,7 @@ public class GenForClass {
         put("s", new String[]{"врагов", "иноплонетян", "атакующих", "невидимок", "пиратов", "динозавров"});
     }};
 
-    private static final Map<String, String[]> dictOfFIO = new HashMap<String, String[]>(){{
+    private static final Map<String, String[]> DICT_OF_FIO = new HashMap<String, String[]>(){{
         //словарь для генерации ФИО
         //имя
         put("1", new String[]{"Алексей", "Дмитрий", "Руслан", "Павел", "Александр", "Николай", "Аркадий", "Инакентий"});
@@ -30,7 +30,7 @@ public class GenForClass {
         //фамилия
         put("3", new String[]{"Иванов", "Петров", "Сидоров", "Хребтов", "Ющенков", "Егоров","Лапушков","Бодров","Финов"});
     }};
-    private static final Map<String, String[]> dictAdress = new HashMap<String, String[]>(){{
+    private static final Map<String, String[]> DICT_ADRESS  = new HashMap<String, String[]>(){{
         //Страна
         put("c", new String[]{"Россия", "Украина", "Беларусия", "Казахсан", "Латвия", "Татарстан", "Литва", "Армения"});
         // Город
@@ -73,7 +73,7 @@ public class GenForClass {
         StringBuilder strBuild = new StringBuilder();
         for (int i = 0; i < args.length(); i++) {
             String chr = Character.toString(args.charAt(i));
-            if (dictAdress.containsKey(chr)) {
+            if (DICT_ADRESS.containsKey(chr)) {
                 if (chr.equals("c")){
                     strBuild.append("Страна: ");
                 } else if (chr.equals("t")) {
@@ -81,7 +81,7 @@ public class GenForClass {
                 } else if (chr.equals("s")){
                     strBuild.append("Улица:  ");
                 }
-                strBuild.append(randomStrFromMapArray(chr, dictAdress));
+                strBuild.append(randomStrFromMapArray(chr, DICT_ADRESS));
                 strBuild.append(" ");
             }
         }
@@ -94,8 +94,8 @@ public class GenForClass {
         StringBuilder strBuild = new StringBuilder();
         for (int i = 0; i < args.length(); i++) {
             String chr = Character.toString(args.charAt(i));
-            if (dictOfFIO.containsKey(chr)) {
-                strBuild.append(randomStrFromMapArray(chr, dictOfFIO));
+            if (DICT_OF_FIO.containsKey(chr)) {
+                strBuild.append(randomStrFromMapArray(chr, DICT_OF_FIO));
                 strBuild.append(" ");
             }
         }
@@ -109,8 +109,8 @@ public class GenForClass {
         StringBuilder strBuild = new StringBuilder();
         for (int i = 0; i < args.length(); i++) {
             String chr = Character.toString(args.charAt(i));
-            if (dictOfValuesBooks.containsKey(chr)) {
-                strBuild.append(randomStrFromMapArray(chr, dictOfValuesBooks));
+            if (DICT_OF_VALUES_BOOKS.containsKey(chr)) {
+                strBuild.append(randomStrFromMapArray(chr, DICT_OF_VALUES_BOOKS));
                 strBuild.append(" ");
             }
         }
@@ -119,18 +119,18 @@ public class GenForClass {
 
 
     public  String getColor() {
-        Integer indx = random.nextInt(color.length);
-        return color[indx];
+        Integer indx = random.nextInt(COLOR.length);
+        return COLOR[indx];
     }
 
     public  String getPencilType() {
-        int indx = random.nextInt(nameOfTypePencil.length);
-        return nameOfTypePencil[indx];
+        int indx = random.nextInt(NAME_OF_TYPE_PENCIL.length);
+        return NAME_OF_TYPE_PENCIL[indx];
     }
 
     public  String getHumanName() {//получаем случайное имя человека
-        int indx = random.nextInt(nameOfHumans.length);
-        return nameOfHumans[indx];
+        int indx = random.nextInt(NAME_OF_HUMANS.length);
+        return NAME_OF_HUMANS[indx];
     }
     public static int getRandomNumber(int number){
 
@@ -142,8 +142,8 @@ public class GenForClass {
     }
 
     public  String getAnimalName() { // получяем случайное имя животного
-        int indx = random.nextInt(nameOfAnimals.length);
-        return nameOfAnimals[indx];
+        int indx = random.nextInt(NAME_OF_ANIMALS.length);
+        return NAME_OF_ANIMALS[indx];
     }
 
     public  Integer getRandomNum(int maxAge) {
@@ -151,8 +151,8 @@ public class GenForClass {
     }
 
     public  String getCompany() {
-        int indx = random.nextInt(nameOfCompany.length);
-        return nameOfCompany[indx];
+        int indx = random.nextInt(NAME_OF_COMPANY.length);
+        return NAME_OF_COMPANY[indx];
 
     }
 }

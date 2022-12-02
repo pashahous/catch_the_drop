@@ -10,7 +10,7 @@ public class Main
     public static void main(String[] args) {
         GenForClass g = new GenForClass();
         List<Person> listOfCompany = new ArrayList<>();
-        for (int i =0; i <100 ; i++) {
+        for (int i =0; i <10 ; i++) {
 
             listOfCompany.add(new Clients(g.getFIO("123"),g.getRandomNumFromAToB(1980,2005),
                     "Клиент",g.randomPhone(9),g.getAdress("cts")));
@@ -20,16 +20,21 @@ public class Main
             listOfCompany.add(new Supervisors(g.getFIO("123"),g.getRandomNumFromAToB(1980,2005),
                     "Начальник",g.randomPhone(9),g.getAdress("cts")));
         }
-        for (int i = 0; i <30 ; i++) {
+        for (int i = 0; i <5 ; i++) {
 
             listOfCompany.add( new Jobs(g.getFIO("123"),g.getRandomNumFromAToB(1980,2005),
                     "Трудяга",g.randomPhone(9),g.getAdress("cts")));
         }
 
-        System.out.println(listOfCompany.get(0).getInfo());
-        System.out.println(listOfCompany.get(1).getInfo());
-        System.out.println(listOfCompany.get(2).getCountClients());
-        System.out.println(listOfCompany.get(3).getCountEmploy());
+        for (Person person:listOfCompany ) {
+
+            System.out.println(person.getInfo());
+            System.out.println(person.getSubdivision());
+
+        }
+        System.out.println(listOfCompany.get(2).getCountEmploy());
+        System.out.println(listOfCompany.get(3).getCountClients());
+
 
 
 
