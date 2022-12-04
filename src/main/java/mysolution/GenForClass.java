@@ -96,7 +96,9 @@ public class GenForClass {
             String chr = Character.toString(args.charAt(i));
             if (DICT_OF_FIO.containsKey(chr)) {
                 strBuild.append(randomStrFromMapArray(chr, DICT_OF_FIO));
-                strBuild.append(" ");
+                if (i < args.length()-1) { // если последняя подстрока, то пробел не добавляем
+                    strBuild.append(" ");
+                }
             }
         }
         return strBuild.toString();
