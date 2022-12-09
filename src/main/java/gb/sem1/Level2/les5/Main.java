@@ -71,6 +71,7 @@ public class Main {
     }
 
     public static void metod3(float[] inpArr) {
+        //реализация Димы
         System.out.println("metod3");
         for (int i = 0; i < inpArr.length; i++) {
             inpArr[i] = 1;
