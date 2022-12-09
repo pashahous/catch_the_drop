@@ -1,6 +1,5 @@
 package gb.sem1.les1;
 
-import com.sun.org.apache.bcel.internal.generic.RETURN;
 
 /*1. Создать пустой проект в IntelliJ IDEA и прописать метод main().
 2. Создать переменные всех пройденных типов данных и инициализировать их значения.
