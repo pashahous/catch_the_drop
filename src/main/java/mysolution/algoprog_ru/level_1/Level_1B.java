@@ -273,10 +273,22 @@ y километров в сумме за все дни.
         return res;
     }
 
+    interface Factorial { // интерфейс для реализации лямбда функции факториала
+        int func(int n);
+    }
+
     public static Double divToFactorial(double n) {
         Double returnNum = 1.0;
+        Factorial factor = (k) -> { // реализация вычисление факторила через лямбда функцию
+            int res = 1;
+            for (int i = 1; i <= k; i++) {
+                res *= i;
+            }
+            return res;
+        };
+
         for (int i = 1; i <= n; i++) {
-            returnNum +=  (float)1/factor(i);;
+            returnNum += (float) 1 / factor.func(i);
         }
         return returnNum;
     }

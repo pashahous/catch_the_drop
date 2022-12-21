@@ -7,7 +7,7 @@ import mysolution.GenForClass;
 public class Main {
     public static void main(String[] args) {
         GenForClass gen = new GenForClass();
-        long m = System.currentTimeMillis();
+        long m = System.nanoTime();
 
         Lib lib = new Lib();
         lib.addBook(new Book(gen.getNameOfBook("nps"),gen.getHumanName(),
@@ -18,7 +18,7 @@ public class Main {
             lib.addBook(new Book(gen.getNameOfBook("nps"),gen.getHumanName(),
                     gen.getRandomNumFromAToB(1500,2022),gen.getRandomNum(1200)));
         }
-        System.out.println((double) (System.currentTimeMillis() - m));
+        System.out.println((double) (System.nanoTime() - m));
 //        System.out.println("INit book end");
 ////        lib.printAllBook();
 //        System.out.println("--------------------------------------------");

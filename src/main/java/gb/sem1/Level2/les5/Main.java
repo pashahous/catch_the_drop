@@ -20,11 +20,11 @@ public class Main {
         for (int i = 0; i < inpArr.length; i++) {
             inpArr[i] = 1;
         }
-        long a1 = System.currentTimeMillis();
+        long a1 = System.nanoTime();
         for (int i = 0; i < inpArr.length; i++) {
             inpArr[i] = (float) (inpArr[i] * Math.sin(0.2f + i / 5.0) * Math.cos(0.2f + i / 5.0) * Math.cos(0.4f + i / 2.0));
         }
-        System.out.println(System.currentTimeMillis() - a1);
+        System.out.println(System.nanoTime() - a1);
     }
 
     public static void metod2(float[] inpArr) {
@@ -34,10 +34,10 @@ public class Main {
         }
         float[] arr1 = new float[h];
         float[] arr2 = new float[h];
-        long a1Start = System.currentTimeMillis();
+        long a1Start = System.nanoTime();
         System.arraycopy(inpArr, 0, arr1, 0, h);
         System.arraycopy(inpArr, h, arr2, 0, h);
-        long a1End = System.currentTimeMillis() - a1Start;
+        long a1End = System.nanoTime() - a1Start;
 
         Thread t1 = new Thread(() -> {
             System.out.println(Thread.currentThread().getName());
@@ -52,7 +52,7 @@ public class Main {
             }
         });
 
-        long a2Start = System.currentTimeMillis();
+        long a2Start = System.nanoTime();
         t1.start();
         t2.start();
         try {
@@ -61,12 +61,12 @@ public class Main {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        long a2End = System.currentTimeMillis() - a2Start;
+        long a2End = System.nanoTime() - a2Start;
 
-        long a3Start = System.currentTimeMillis();
+        long a3Start = System.nanoTime();
         System.arraycopy(arr1, 0, inpArr, 0, h);
         System.arraycopy(arr2, 0, inpArr, h, h);
-        long a3End = System.currentTimeMillis() - a3Start;
+        long a3End = System.nanoTime() - a3Start;
         System.out.printf("Time to split array = %d \nTime to calculate = %d\n Time to merge =  %d\n", a1End, a2End, a3End);
     }
 
@@ -79,7 +79,7 @@ public class Main {
 
         float[] arr1 = new float[h];
         float[] arr2 = new float[h];
-        long a1Start = System.currentTimeMillis();
+        long a1Start = System.nanoTime();
         System.arraycopy(inpArr, 0, arr1, 0, h);
         System.arraycopy(inpArr, h, arr2, 0, h);
 
@@ -95,7 +95,7 @@ public class Main {
         }
         System.arraycopy(arr1, 0, inpArr, 0, h);
         System.arraycopy(arr2, 0, inpArr, h, h);
-        System.out.println("TIme to calculate =" + (System.currentTimeMillis() - a1Start));
+        System.out.println("TIme to calculate =" + (System.nanoTime() - a1Start));
     }
 
     public static void calculateIndx(float[] arr) {

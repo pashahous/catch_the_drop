@@ -19,9 +19,9 @@ public class Main {
             //1 - прилагательные
             //2 - существительные
 //        System.out.println(str[0]);
-//        long m = System.currentTimeMillis();
+//        long m = System.nanoTime();
 //        System.out.println(Task1.sumFor1ToN(6));
-//        System.out.println((double) (System.currentTimeMillis() - m));
+//        System.out.println((double) (System.nanoTime() - m));
 //        System.out.println(GenForClass.getNameOfBook("nps"));
     }
     public static void printBinary(int x) {
