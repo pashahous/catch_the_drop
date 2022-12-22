@@ -3,7 +3,7 @@ package mysolution.threads.examclouds;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ThreadRunnable implements Runnable {
+public class ThreadRunnable implements Runnable { //имплементируем интерфейс Раннбл
     private final int numOfPrintNumbers;
     Thread tr;
 
@@ -17,8 +17,15 @@ public class ThreadRunnable implements Runnable {
     @Override
     public void run() {
         for (int i = 0; i < this.numOfPrintNumbers; i++) {
-            if( i % 10 == 0)
-            System.out.println(Thread.currentThread().getName() + "  = " + i);
+            if( i % 10 == 0) {
+                try {
+                    Thread.sleep(10);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+//            System.out.println(Thread.currentThread().getName() + "  = " + i);
         }
     }
 
@@ -31,8 +38,8 @@ public class ThreadRunnable implements Runnable {
 class Task2{
     public static void main(String[] args) {
         List<ThreadRunnable> listThread = new ArrayList<>();
-        for (int i = 0; i < 5000; i++) {
-           listThread.add(new ThreadRunnable(500));
+        for (int i = 0; i < 15000; i++) {
+           listThread.add(new ThreadRunnable(5000));
         }
         for (ThreadRunnable tr: listThread ) {
             tr.startThread();
